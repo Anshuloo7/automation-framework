@@ -1,6 +1,7 @@
 from behave import given, then
 import requests
 from automation_framework.utils.logger import logger
+from automation_framework.utils.retry_utils import retry_get
 
 @given('I hit the demo API')
 @given('I hit the demo API with query "{query}"')
@@ -11,8 +12,7 @@ def step_hit_api(context, query=None):
     if query:
         url = f"{url}?{query}"
     logger.info(f"[HIT] GET {url}")
-    context.response = requests.get(url)
-    # logger.debug(f"[RESPONSE] {context.response.json()}")  If response need to be debugged
+    context.response = retry_get(url)
 
 
 @given("I hit an invalid API endpoint")
