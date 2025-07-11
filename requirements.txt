@@ -1,2 +1,3 @@
 requests~=2.31.0
 behave~=1.2.6
+behave-html-formatter~=1.4.4
