@@ -9,3 +9,10 @@ def fetch_user_names():
     results = [row[0] for row in cursor.fetchall()]
     conn.close()
     return results
+
+def insert_user(name):
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO users (name) VALUES (?)", (name,))
+    conn.commit()
+    conn.close()

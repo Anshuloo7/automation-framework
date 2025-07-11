@@ -33,5 +33,12 @@ Feature: Sample Behave Test
   Scenario: Verify user exists in DB
     Then I should see user 'Alice' in the database
 
+  @faker @regression
+  Scenario: Generate a random user
+    Given I generate a random user
 
+  @e2e @regression
+  Scenario: Full flow — generate, insert, and verify user
+    Given I create and insert a random user
+    Then I should find that user in the database
 

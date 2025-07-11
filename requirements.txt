@@ -2,10 +2,12 @@ behave==1.2.6
 behave-html-formatter==0.9.10
 certifi==2025.7.9
 charset-normalizer==3.4.2
+Faker==37.4.0
 idna==3.10
 parse==1.20.2
 parse_type==0.6.4
 requests==2.31.0
 six==1.17.0
 tenacity==9.1.2
+tzdata==2025.2
 urllib3==2.5.0
