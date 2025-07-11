@@ -10,3 +10,9 @@ __pycache__/
 
 # Behave output
 *.output
+
+# Behave reports
+reports/
+
+# Logs
+logs/
