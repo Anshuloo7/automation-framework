@@ -1,0 +1,1 @@
+from automation_framework.utils.context_setup import before_all
