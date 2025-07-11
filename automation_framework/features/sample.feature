@@ -29,4 +29,9 @@ Feature: Sample Behave Test
       | alpha | beta   |
     Then I should get a successful response
 
+  @db @regression
+  Scenario: Verify user exists in DB
+    Then I should see user 'Alice' in the database
+
+
 
