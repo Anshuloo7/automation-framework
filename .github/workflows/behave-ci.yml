@@ -25,7 +25,11 @@ jobs:
           source .venv/bin/activate
           pip install -r requirements.txt
 
-      - name: ✅ Run Behave Tests with HTML report
+      - name: Create SQLite DB
+        run: |
+          python create_db.py
+
+      - name: Run Behave Tests with HTML report
         run: |
           source .venv/bin/activate
           mkdir -p reports/
